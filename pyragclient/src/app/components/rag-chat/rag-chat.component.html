@@ -1,0 +1,53 @@
+<div class="chat-container">
+
+  <div class="header">
+    🤖 PyRAG Assistant
+  </div>
+
+  <div class="chat-body">
+   
+    
+<div
+      *ngFor="let message of messages"
+      class="message"
+      [ngClass]="message.sender">
+
+      <div class="text">
+        {{ message.text }}
+      </div>
+
+      <div class="timestamp">
+        {{ message.timestamp | date:'shortTime' }}
+      </div>
+
+    </div>
+
+    <div
+      *ngIf="loading"
+      class="typing-indicator">
+
+      <div></div>
+      <div></div>
+      <div></div>
+
+    </div>
+
+  </div>
+
+  <div class="chat-footer">
+
+    <textarea
+      [(ngModel)]="question"
+      rows="2"
+      placeholder="Ask a question..."
+      (keydown.enter)="askQuestion()">
+    </textarea>
+
+    <button
+      (click)="askQuestion()">
+      Send
+    </button>
+
+  </div>
+
+</div>
