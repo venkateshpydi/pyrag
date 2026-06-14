@@ -49,6 +49,8 @@ Model          (ChromaDB)
          ▼
       Response
 ```
+ <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/cb538fb8-a803-4849-9518-b9e9bc0fabb8" />
+
 
 ---
 
